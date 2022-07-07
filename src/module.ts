@@ -1,1 +1,1 @@
-export const hello = () => console.log('Hello!');
+export const hello = () => console.log(process.env.ABC);
