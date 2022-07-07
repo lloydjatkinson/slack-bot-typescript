@@ -1,0 +1,23 @@
+{
+  "name": "slack-bot-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloydjatkinson/slack-bot-typescript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lloydjatkinson/slack-bot-typescript/issues"
+  },
+  "homepage": "https://github.com/lloydjatkinson/slack-bot-typescript#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "typescript": "^4.7.4"
+  }
+}
