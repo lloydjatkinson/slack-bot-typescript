@@ -18,6 +18,7 @@ module.exports = {
         'build',
     ],
     rules: {
+        'import/import/no-extraneous-dependencies',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'eol-last': ['error', 'never'],
@@ -26,4 +27,16 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         indent: ['error', 4],
     },
+    overrides: [
+        {
+            files: [
+                '**/__tests__/*.{j,t}s?(x)',
+                '**/tests/unit/**/*.spec.{j,t}s?(x)',
+                '**/*.spec.{j,t}s?(x)',
+            ],
+            env: {
+                jest: true,
+            },
+        },
+    ],
 };
