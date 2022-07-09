@@ -1,6 +1,6 @@
-import { createTask2 } from '../infrastructure';
+import { createTask } from '../infrastructure';
 
-export default createTask2({
+export default createTask({
     name: 'CalculateAverage',
     async start({ logger }) {
         logger.info(__filename);
