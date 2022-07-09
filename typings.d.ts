@@ -8,10 +8,10 @@ declare namespace NodeJS
     // https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces
     export interface ProcessEnv
     {
-        ABC: string;
-        NODE_ENV: 'development' | 'production' | 'test';
-        MY_API_KEY: string
-        DB_USER?: string
-        // ...
+        SLACK_SIGNING_SECRET: string;
+
+        SLACK_BOT_TOKEN: string;
+
+        SLACK_APP_TOKEN: string;
     }
 }

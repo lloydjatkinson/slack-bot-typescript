@@ -1,4 +1,4 @@
-import { createTask } from '../infrastructure';
+import { createTask } from '../../infrastructure/task-framework';
 
 export default createTask({
     name: 'CalculateAverage',

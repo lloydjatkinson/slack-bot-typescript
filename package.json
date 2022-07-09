@@ -34,7 +34,9 @@
     "vitest": "^0.17.1"
   },
   "dependencies": {
+    "@slack/bolt": "^3.11.3",
     "dotenv": "^16.0.1",
+    "rotating-file-stream": "^3.0.4",
     "tslog": "^3.3.3"
   }
 }
