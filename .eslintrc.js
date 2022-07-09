@@ -18,14 +18,21 @@ module.exports = {
         'build',
     ],
     rules: {
-        'import/import/no-extraneous-dependencies',
+        'import/no-extraneous-dependencies': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'eol-last': ['error', 'never'],
+        'max-len': ['error', { code: 400 }],
         'import/prefer-default-export': 'off',
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         indent: ['error', 4],
+
+        // These are weird inconsistencies between eslint and typescript eslint integration.
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': ['error'],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error'],
     },
     overrides: [
         {
