@@ -1,12 +1,7 @@
 import 'dotenv/config';
-// import calculateAverageTask from './features/tasks/calculate-average';
-
-// (async () => {
-//     await calculateAverageTask;
-// })();
-
 import { App } from '@slack/bolt';
 import { tslogSlackAdapter } from './infrastructure/tslog-slack-adapter';
+import { getLogger } from './infrastructure/logging';
 
 const app = new App({
     token: process.env.SLACK_BOT_TOKEN,
@@ -16,15 +11,14 @@ const app = new App({
     logger: tslogSlackAdapter(),
 });
 
+
 (async () => {
-    // Start your app
     await app.start(3000);
 
-    // console.log('⚡️ Bolt app is running!');
-
-    // Listens to incoming messages that contain "hello"
     app.message('hello', async ({ message, say }) => {
-    // say() sends a message to the channel where the event was triggered
+        const logger = getLogger({ name: 'HelloTask' });
+        logger.info('Replying to hello message');
+
         await say(`Hey there <@${message}>!`);
     });
 
