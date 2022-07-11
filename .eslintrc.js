@@ -9,6 +9,7 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+        project: './tsconfig.json',
     },
     plugins: [
         '@typescript-eslint',
@@ -22,6 +23,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'eol-last': ['error', 'never'],
+        'linebreak-style': 'off',
         'max-len': ['error', { code: 400 }],
         'import/prefer-default-export': 'off',
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -33,6 +35,7 @@ module.exports = {
         '@typescript-eslint/no-shadow': ['error'],
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['error'],
+        'no-useless-constructor': 'off',
     },
     overrides: [
         {

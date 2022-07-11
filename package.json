@@ -35,7 +35,9 @@
   },
   "dependencies": {
     "@slack/bolt": "^3.11.3",
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1",
+    "node-schedule": "^2.1.0",
     "rotating-file-stream": "^3.0.4",
     "tslog": "^3.3.3"
   }
